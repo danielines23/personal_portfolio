@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniel Lines' Portfolio">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="author" content="Daniel Lines">
+  <title>Daniel Lines</title>
+</head>
+
+<body>
+
+  <div class="heading">
+    <h1>Daniel Lines</h1>
+  </div>
+
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="resume.html">Resume</a>
+  </div>
+
+  <h2>Identifying High-Risk Patients for Diabetes Readmissions: A Clinical Decision Support Model</h2>
+  <h4>Afm Khan, Abdulla Elkhadrawy, Theodore Jeliazkov, Daniel Lines, Andrew Qian, Rahul Ramarao</h4>
+  <div class="project_desc">
+    <h3>Abstract</h3>
+    <p>Effective management of diabetes during hospital stays is crucial for preventing adverse outcomes and reducing
+      healthcare costs associated with readmissions. This study aimed to develop a predictive model for identifying
+      high-risk patients for diabetes-related readmissions, utilizing a comprehensive dataset of 101,766 hospitalized
+      patients across 130 U.S. hospitals from 1999 to 2008. A logistic regression model was constructed, incorporating
+      key variables such as age, weight, insulin administration, number of laboratory procedures, and length of hospital
+      stay. The model demonstrated promising performance, with an area under the receiver operating characteristic curve
+      of 0.77, accuracy of 0.74, and balanced precision and recall scores of 0.77. These findings highlight the
+      potential of the model as a decision support tool, enabling healthcare providers to allocate resources more
+      effectively, implement targeted interventions, and ultimately improve patient outcomes and reduce the financial
+      burden associated with suboptimal diabetes management during hospitalization. Future work should focus on
+      leveraging larger and more diverse datasets, integrating the model into clinical workflows, and exploring
+      strategies for optimizing resource allocation based on risk stratification.</p>
+    <h3>Introduction</h3>
+    <p>Diabetes mellitus is a chronic condition characterized by elevated blood glucose levels, which can lead to
+      serious complications if not properly managed. Effective glycemic control during hospital stays is crucial for
+      preventing adverse outcomes and reducing healthcare costs associated with diabetes-related readmissions. This
+      research project aims to develop a predictive model to identify high-risk patients for readmission, enabling
+      healthcare providers to implement targeted interventions and improve diabetes management strategies.
+    </p>
+    <p>The dataset used in this research encompasses a comprehensive collection of 101,766 instances of hospitalized
+      patients diagnosed with diabetes, spanning a decade (1999-2008) across 130 hospitals in the United States. The
+      rich dataset includes 47 features, encompassing patient demographics, hospital metrics, laboratory test results,
+      and medication information. This extensive feature set provides a robust foundation for developing a predictive
+      model capable of evaluating readmission risk and informing clinical decision-making processes.
+    </p>
+    <p>Accurate assessment of readmission risk holds significant importance in the context of diabetes management.
+      Identifying high-risk patients early in their hospital stay allows for proactive measures to be taken, such as
+      intensified glucose monitoring, medication adjustments, and targeted educational interventions. These measures can
+      potentially improve glycemic control, reduce the incidence of diabetes-related complications, and ultimately lower
+      the likelihood of hospital readmissions.
+    </p>
+    <p>Leveraging the comprehensive dataset from the UC Irvine archives, this study aimed to develop a predictive model
+      capable of accurately identifying high-risk patients for diabetes-related readmissions. </p>
+    <h3>Methods</h3>
+    <p>The study leveraged the glycated hemoglobin (A1C) test, a widely recognized diagnostic tool for diabetes and a
+      reliable indicator of long-term glycemic control. Patients with A1C values greater than 7% and 8% were selected
+      from the dataset, emphasizing individuals at elevated to high risk of diabetes-related complications and
+      readmissions. The clinical significance of various features was carefully evaluated to inform the model
+      development process.
+    </p>
+    <p>Key variables of interest included insulin administration, age group, and weight. Previous research has
+      established relationships between these variables and diabetes management. Higher age groups are often associated
+      with increased weight gain, while excess body weight is a known risk factor for type 2 diabetes and reduced
+      insulin sensitivity. Furthermore, a positive correlation between the number of laboratory procedures and diabetes
+      severity was observed, suggesting that patients requiring more extensive testing may face an increased risk of
+      readmission.
+    </p>
+    <p>To accommodate both quantitative and categorical variables in the dataset, logistic data preprocessing was
+      performed. Categorical variables were encoded using integer values, ensuring their compatibility with the modeling
+      techniques employed.
+    </p>
+    <p>The model training process utilized a subset of 288 patients, with 20% of the data reserved for testing and
+      validation purposes. Feature importance analysis and incorporation of prior clinical knowledge played a crucial
+      role in guiding the model development. This approach aimed to prevent superficial assumptions based solely on the
+      available data and mitigate the risk of overfitting, which could compromise the model's generalizability and
+      performance on unseen data.
+    </p>
+    <p>The logistic regression model was constructed using the following formula:
+    </p>
+    <p>Logit(Readmission) = β0 + β1Age + β2Weight + β3Insulin + β4Number_of_Labs + β5Time_in_Hospital + β6Discharge_ID +
+      β11*(AgeInsulin) + β12(InsulinWeight) + β13(AgeWeight) + β7Number_In_Patient_Visit</p>
+    <p>This model captured the main effects of age, weight, insulin administration, number of laboratory procedures,
+      time in hospital, discharge identification, and the number of inpatient visits. Additionally, interaction terms
+      were included to account for potential nonlinear relationships between age, insulin, and weight, as these factors
+      are known to influence diabetes management and readmission risk.
+    </p>
+    <p>By combining statistical modeling techniques with clinical domain knowledge, the proposed approach aimed to
+      develop a robust predictive model capable of accurately identifying high-risk patients for diabetes-related
+      readmissions, ultimately informing targeted interventions and improving diabetes management strategies in hospital
+      settings.
+    </p>
+    <h3>Results and Conclusions
+    </h3>
+    <p>The developed logistic regression model demonstrated promising performance in predicting the risk of
+      diabetes-related readmissions. The model's discriminative ability was assessed using the Area Under the Receiver
+      Operating Characteristic (ROC) Curve (AUC), a widely recognized metric for evaluating binary classification
+      models. An AUC of 0.77 indicates that the model can effectively distinguish between patients at high and low risk
+      of readmission.</p>
+    <p>Furthermore, the model achieved an overall accuracy of 0.74, suggesting a reasonably high rate of correct
+      predictions. The F1 score, which harmonizes precision and recall, was 0.77, indicating a balanced trade-off
+      between the model's ability to correctly identify true positives and avoid false positives.</p>
+    <p>Precision, which quantifies the proportion of positive predictions that are truly positive, was 0.77. This metric
+      is particularly relevant in the context of healthcare, as it reflects the model's reliability in identifying
+      high-risk patients who genuinely require targeted interventions.
+    </p>
+    <p>Complementing the precision score, the model's recall of 0.77 highlights its proficiency in capturing a
+      substantial proportion of true positive cases, minimizing the risk of overlooking high-risk patients who may
+      benefit from proactive diabetes management strategies.
+    </p>
+    <p>These performance metrics collectively demonstrate the model's potential to serve as a valuable decision support
+      tool in clinical settings.
+    </p>
+    <h3>Next Steps/Future Work
+    </h3>
+    <p>While the current model demonstrates promising performance in predicting diabetes-related readmission risk, there
+      are several avenues for further improvement and broader implementation. One crucial step involves leveraging more
+      comprehensive and high-quality data sources to refine and strengthen the model's predictive capabilities. As
+      healthcare systems continue to digitize and integrate electronic health records, the availability of larger and
+      more diverse datasets will enable the development of more robust and reliable models.
+    </p>
+    <p>Furthermore, it is essential to highlight the potential for incorporating predictive models as supplementary
+      tools in clinical decision-making processes. Physicians and healthcare providers can leverage these models to
+      enhance their understanding of individual patient risk profiles and tailor treatment plans accordingly. By
+      integrating model predictions with clinical expertise and patient-specific factors, healthcare professionals can
+      make more informed decisions regarding resource allocation, patient education, and follow-up care strategies.
+    </p>
+    <p>A particularly intriguing avenue for future exploration is the potential to adjust hospital stay durations and
+      conduct additional diagnostic tests for patients identified as high-risk by the model. Prolonging hospital stays
+      and performing comprehensive evaluations for these individuals could enable earlier detection and management of
+      underlying conditions, potentially mitigating the risk of readmissions and associated complications.
+    </p>
+    <p>In conclusion, this study presents a logistic regression model aimed at predicting the risk of diabetes-related
+      readmissions among hospitalized patients. By leveraging a comprehensive dataset spanning over a decade and
+      incorporating key clinical variables, the model demonstrated promising performance metrics, including an AUC of
+      0.77, accuracy of 0.74, and balanced precision and recall scores of 0.77. These results highlight the potential of
+      the model to serve as a valuable decision support tool, enabling healthcare providers to identify high-risk
+      patients and implement targeted interventions for improved diabetes management during hospital stays. While the
+      current findings are encouraging, future work should focus on accessing larger and more diverse datasets,
+      integrating the model into clinical workflows, and exploring strategies for optimizing resource allocation based
+      on risk stratification. Interdisciplinary collaboration between healthcare professionals, data scientists, and
+      policymakers will be crucial in translating these predictive models into tangible improvements in patient outcomes
+      and healthcare delivery. Ultimately, the adoption of such data-driven approaches has the potential to
+      revolutionize diabetes care, reduce readmission rates, and alleviate the substantial burden on patients and
+      healthcare systems alike.
+    </p>
+  </div>
+  <div class="pdf">
+    <iframe class="pdf" src="Diabetes Readmission Slides.pdf" width="800" height="800"></iframe>
+  </div>
+  <footer>
+    <p>&copy; 2024 Daniel Lines. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

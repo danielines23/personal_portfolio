@@ -1,0 +1,180 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  font-size: 36px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  margin: auto;
+  width: 750px;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+h3 {
+  font-family: 'Times New Roman', serif;
+  text-align: left;
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+h4 {
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  color: gray;
+}
+
+footer {
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+}
+
+.heading {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+
+.intro {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.intro img {
+  width: 200px;
+  height: auto;
+}
+
+.intro p {
+  max-width: 400px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.projects img {
+  width: 150px;
+  height: 150px;
+}
+
+.projects p {
+  max-width: 600px;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.featured img {
+  width: 150px;
+  height: 150px;
+}
+
+.featured p {
+  max-width: 500px;
+}
+
+.featured_project {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.featured_project img {
+  width: 150px;
+  height: 150px;
+}
+
+.featured_project p {
+  max-width: 500px;
+}
+
+.menu {
+  display: flex;
+  margin: 0 auto;
+  background-color: #113951;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.menu a {
+  flex: 1;
+  text-align: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.menu a:hover {
+  background-color: #6F8FA2;
+}
+
+.menu a.active {
+  background-color: #477187;
+}
+
+.pdf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.project_members {
+  font-size: 16px;
+  color: gray;
+}
+
+.project_desc {
+  margin: auto;
+  text-align: left;
+  width: 60%;
+}
+
+.project_desc img {
+  width: 100%;
+  height: auto;
+}
