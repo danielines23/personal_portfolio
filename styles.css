@@ -71,7 +71,7 @@ footer {
 }
 
 .main_photo img {
-  max-width: 100%;
+  max-width: auto;
   max-height: 400px;
   width: auto;
   height: auto;
